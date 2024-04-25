@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>{{title}}</title>
+</head>
+
+<body>
+  <h1>{{title}}</h1>
+  <div style="display: flex;">
+    <p>{{h}}:</p>
+    <p>{{min}}:</p>
+    {% if sec % 2 == 0 %}
+    <p>{{sec}}</p>
+    {% else %}
+    <p style="color: red;">{{sec}}</p>
+    {% endif %}
+  </div>
+
+</body>
+
+</html>
