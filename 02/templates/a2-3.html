@@ -18,7 +18,11 @@
     <tr>
       <td>{{id}}</td>
       <td>{{name}}</td>
+      {% if future %}
+      <td style="color: red;">{{date}}</td>
+      {% else %}
       <td>{{date}}</td>
+      {% endif %}
       <td>{{place}}</td>
     </tr>
   </table>
