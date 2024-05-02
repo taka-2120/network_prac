@@ -1,9 +1,9 @@
 from cgi import FieldStorage
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
-with open("a1-4.html", mode="r", encoding="utf-8") as file:
+with open("a1-4in.html", mode="r", encoding="utf-8") as file:
     input = file.read()
-with open("a1-3.html", mode="r", encoding="utf-8") as file:
+with open("a1-4out.html", mode="r", encoding="utf-8") as file:
     output = file.read()
 
 
