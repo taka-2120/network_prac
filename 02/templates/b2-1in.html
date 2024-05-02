@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Currency Converter</title>
+</head>
+
+<body>
+  <h1>Currency Converter</h1>
+  <div style="
+    margin: auto; 
+    max-width: 1000px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between">
+    <div style="display: flex;">
+      <p>1</p>
+      <p style="margin-left: 15px"><b>USD</b></p>
+    </div>
+    <div style="display: flex;">
+      <p>{{jpy}}</p>
+      <p style="margin-left: 15px"><b>JPY</b></p>
+    </div>
+  </div>
+  <form action="/result" method="post">
+    <div style="margin: auto; max-width: 600px;">
+      <p><b>From</b></p>
+      <select name="from_currency" id="from_currency">
+        {%for key in keys%}
+        <option id="cls{{key}}">{{key.upper()}}</option>
+        {%endfor%}
+      </select>
+      <label for="amount" style="margin-left: 15px;">Amount</label>
+      <input type="text" name="amount" id="amount">
+      <br />
+      <p><b>To</b></p>
+      <select name="to_currency" id="to_currency">
+        {%for key in keys%}
+        <option id="cls{{key}}">{{key.upper()}}</option>
+        {%endfor%}
+      </select>
+      <br />
+      <br />
+      <input type="submit" value="Convert">
+    </div>
+  </form>
+</body>
+
+</html>

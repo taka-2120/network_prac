@@ -1,11 +1,6 @@
-import datetime
-
 from flask import Flask, render_template
 
-# flaskモジュールからFlaskクラスとrender_templateメソッドをインポートする
-
 app = Flask(__name__)
-# Flaskインスタンスを生成する．
 
 
 @app.route("/id1")
@@ -48,8 +43,5 @@ def event3():
 
 
 if __name__ == "__main__":
-    # このプログラムが直接起動されたものであれば以下を実行する．
     app.debug = True
-    # デバッグ機能をONにする．
     app.run(host="localhost", port=8500)
-    # ホスト名をlocalhostにして，Webアプリケーションを起動する．
