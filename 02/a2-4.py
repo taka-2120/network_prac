@@ -34,6 +34,7 @@ def event1():
         name="予定1",
         date="2024/04/01",
         place="場所1",
+        future=False,
     )
 
 
@@ -45,6 +46,7 @@ def event2():
         name="予定2",
         date="2024/04/02",
         place="場所2",
+        future=False,
     )
 
 
@@ -56,6 +58,7 @@ def event3():
         name="予定3",
         date="2024/09/30",
         place="場所3",
+        future=True,
     )
 
 
@@ -63,5 +66,5 @@ if __name__ == "__main__":
     # このプログラムが直接起動されたものであれば以下を実行する．
     app.debug = True
     # デバッグ機能をONにする．
-    app.run(host="localhost", port=8000)
+    app.run(host="localhost", port=8500)
     # ホスト名をlocalhostにして，Webアプリケーションを起動する．
