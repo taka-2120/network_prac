@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{title}}</title>
+  </head>
+
+  <body>
+    <h1>{{title}}</h1>
+    <div style="display: flex">
+      <p>{{hour}}:</p>
+      <p>{{minute}}:</p>
+      {% if second % 2 == 0 %}
+      <p>{{second}}</p>
+      {% else %}
+      <p style="color: red">{{second}}</p>
+      {% endif %}
+    </div>
+  </body>
+</html>
