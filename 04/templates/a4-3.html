@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>{{title}}</title>
+</head>
+
+<body>
+  <table border="1">
+    <tr>
+      {% for title in schema %}
+      <th>{{title}}</th>
+      {% endfor %}
+    </tr>
+    {% for event in events %} {% if now > event[0] %} <tr>
+      <td>{{event[1]}}</td>
+      <td>{{event[0]}}</td>
+      </tr>
+      {% else %}
+      <tr style="color: red">
+        <td>{{event[1]}}</td>
+        <td>{{event[0]}}</td>
+      </tr>
+      {% endif %} {% endfor %}
+  </table>
+</body>
+
+</html>
