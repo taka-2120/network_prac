@@ -5,22 +5,22 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET"])
 def input():
-    prevId = request.cookies.get("prev_id")
-    if prevId is None:
-        prevId = ""
-    return render_template("a4-1in.html", title="Event form", prevId=prevId)
+    prev_id = request.cookies.get("prev_id")
+    if prev_id is None:
+        prev_id = ""
+    return render_template("a4-1in.html", title="Event form", prev_id=prev_id)
 
 
 @app.route("/", methods=["POST"])
 def output():
-    eventId = request.form["eventId"]
+    event_id = request.form["event_id"]
     template = ""
 
-    if eventId == "1":
+    if event_id == "1":
         template = event1()
-    elif eventId == "2":
+    elif event_id == "2":
         template = event2()
-    elif eventId == "3":
+    elif event_id == "3":
         template = event3()
     else:
         template = render_template(
@@ -28,7 +28,7 @@ def output():
         )
 
     response = make_response(template)
-    response.set_cookie("prev_id", eventId)
+    response.set_cookie("prev_id", event_id)
 
     return response
 
