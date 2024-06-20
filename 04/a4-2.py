@@ -1,7 +1,7 @@
 from flask import Flask, make_response, render_template, request, session
 
 app = Flask(__name__)
-app.secret_key = "abc"
+app.secret_key = "82b6c3ca-42ae-4ea4-b5e8-1654c90cabac"
 
 
 @app.route("/", methods=["GET"])
