@@ -49,7 +49,7 @@ def delete_event():
     db = get_db()
 
     query = db.execute(f"DELETE FROM events WHERE id = {event_id}")
-
+    db.commit()
     query = db.execute("SELECT * FROM events")
     events = query.fetchall()
     events = list(events)
