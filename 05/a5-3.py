@@ -53,6 +53,7 @@ def insert_event():
     query = db.execute(
         f"INSERT INTO events(name, date, place) VALUES('{name}','{date}','{place}')"
     )
+    db.commit()
 
     query = db.execute("SELECT * FROM events")
     events = query.fetchall()
@@ -78,4 +79,4 @@ def insert_event():
 
 if __name__ == "__main__":
     app.debug = True
-    app.run(host="localhost", port=5500)
+    app.run(host="localhost", port=5000)

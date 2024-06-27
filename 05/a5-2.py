@@ -34,7 +34,7 @@ def database():
 
     schema = ["ID", "Name", "Date", "Place"]
     return render_template(
-        "a5-1.html",
+        "a5-2.html",
         title="Events",
         schema=schema,
         events=events,
@@ -44,4 +44,4 @@ def database():
 
 if __name__ == "__main__":
     app.debug = True
-    app.run(host="localhost", port=5500)
+    app.run(host="localhost", port=5000)
