@@ -8,7 +8,7 @@ def input():
     prev_id = request.cookies.get("prev_id")
     if prev_id is None:
         prev_id = ""
-    return render_template("a6-4in.html", title="Event form", prev_id=prev_id)
+    return render_template("a4-1in.html", title="Event form", prev_id=prev_id)
 
 
 @app.route("/", methods=["POST"])
@@ -24,7 +24,7 @@ def output():
         template = event3()
     else:
         template = render_template(
-            "a6-4out.html", title="Event form", message="Invalid ID"
+            "a4-1out.html", title="Event form", message="Invalid ID"
         )
 
     response = make_response(template)
@@ -35,7 +35,7 @@ def output():
 
 def event1():
     return render_template(
-        "a6-4out.html",
+        "a4-1out.html",
         title="イベント1",
         id=1,
         name="予定1",
@@ -47,7 +47,7 @@ def event1():
 
 def event2():
     return render_template(
-        "a6-4out.html",
+        "a4-1out.html",
         title="イベント2",
         id=2,
         name="予定2",
@@ -59,7 +59,7 @@ def event2():
 
 def event3():
     return render_template(
-        "a6-4out.html",
+        "a4-1out.html",
         title="イベント3",
         id=3,
         name="予定3",

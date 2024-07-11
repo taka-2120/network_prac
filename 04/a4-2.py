@@ -16,8 +16,9 @@ def input():
 
 @app.route("/", methods=["POST"])
 def output():
-    result = session["result"]
-    if result is None:
+    if "result" in session:
+        result = session["result"]
+    else:
         result = 0
 
     value = request.form["value"]
