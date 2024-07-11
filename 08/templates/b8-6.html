@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  {% if result %}
+  <h2>{{name}}[{{date}}]まで、あと{{remaining}}日です。</h2>
+  {% else %}
+  <form action="/" method="post">
+    <label for="event_name">イベント名</label>
+    <input type="text" name="event_name" id="event_name">
+    <input type="date" name="event_date" id="event_date">
+    <input type="submit">
+  </form>
+  {% endif %}
+</body>
+
+</html>
