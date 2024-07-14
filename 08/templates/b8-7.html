@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{title}}</title>
+  </head>
+
+  <body>
+    <h2>{{title}}</h2>
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Place</th>
+        <th>Date</th>
+      </tr>
+      {% for event in events %} {% if now < event.date %}
+      <tr style="color: green">
+        <td>{{event.id}}</td>
+        <td>{{event.name}}</td>
+        <td>{{event.place}}</td>
+        <td>{{event.date.date()}}</td>
+      </tr>
+      {% elif now == event.date %}
+      <tr>
+        <td>{{event.id}}</td>
+        <td>{{event.name}}</td>
+        <td>{{event.place}}</td>
+        <td>{{event.date.date()}}</td>
+      </tr>
+      {% else %}
+      <tr style="color: red">
+        <td>{{event.id}}</td>
+        <td>{{event.name}}</td>
+        <td>{{event.place}}</td>
+        <td>{{event.date.date()}}</td>
+      </tr>
+      {% endif %} {% endfor %}
+    </table>
+  </body>
+</html>
